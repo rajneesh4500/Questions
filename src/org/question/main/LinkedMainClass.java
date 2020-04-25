@@ -48,16 +48,16 @@ public class LinkedMainClass {
         //System.out.println(i != null?i:"Some error occured check your list");
 
         //6.Palindrom
-//        LinkedList<Integer> li = new LinkedList<>();
-//        li.add(5);
-//        li.add(2);
-//        li.add(2);
-//        li.add(3);
-//        li.add(5);
-//        System.out.println(li.isPalindrome()?"given list is palindrome":"Given list is not a palindrome");
+        //LinkedList<Integer> li = new LinkedList<>();
+        //li.add(5);
+        //li.add(2);
+        //li.add(2);
+        //li.add(3);
+        //li.add(5);
+        //System.out.println(li.isPalindrome()?"given list is palindrome":"Given list is not a palindrome");
 
 
-        //7.Delete M nodes after N nodes
+        //7. Delete M nodes after N nodes
         //Scanner sc = new Scanner(System.in);
         //System.out.println("Enter after how many nodes you want to delete");
         //int m=sc.nextInt();
@@ -65,6 +65,12 @@ public class LinkedMainClass {
         //int nn = sc.nextInt();
         //in.deleteMN(m,nn);
         //in.printAll();
+
+        //Testing the iterator
+        System.out.println("Testing the iterator");
+        for (Integer x : in){
+            System.out.println(x);
+        }
 
 
 

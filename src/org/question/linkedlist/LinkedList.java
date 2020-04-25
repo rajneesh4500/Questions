@@ -1,6 +1,43 @@
 package org.question.linkedlist;
 
-public class LinkedList<T> {
+import org.omg.CosNaming.BindingIteratorHelper;
+
+import java.util.Iterator;
+
+public class LinkedList<T> implements Iterable<T> {
+
+    class IteratorHelper implements  Iterator<T>{
+
+        Node<T> current;
+        public IteratorHelper(){
+            this.current = head;
+        }
+        @Override
+        public boolean hasNext() {
+            return current!=null;
+        }
+
+        @Override
+        public T next() {
+            T data;
+            data = hasNext()?current.data:null;
+            if(data==null){
+                try {
+                    throw new NoSuchFieldException();
+                } catch (NoSuchFieldException e) {
+                    e.printStackTrace();
+                }
+            }
+            current = current.next;
+            return data;
+        }
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new IteratorHelper();
+    }
+
     class Node<T>{
         T data;
         Node next;
