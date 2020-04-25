@@ -38,7 +38,7 @@ public class LinkedList<T> implements Iterable<T> {
         return new IteratorHelper();
     }
 
-    class Node<T>{
+    public class Node<T>{
         T data;
         Node next;
 
